@@ -1,0 +1,26 @@
+Index: owfs-2.8p20/module/swig/python/python.m4
+===================================================================
+--- owfs-2.8p20.orig/module/swig/python/python.m4
++++ owfs-2.8p20/module/swig/python/python.m4
+@@ -50,7 +50,7 @@ PYTHON="$PYBIN"
+ fi
+ 
+ 
+-if test ! -z "$PYTHONCONFIG"; then
++if test ! -z "$PYTHONCONFIG_disabled"; then
+ 
+ # python-config available.
+    AC_MSG_CHECKING(for Python cflags)
+@@ -114,10 +114,10 @@ else
+ # python-config not available.
+ if test -n "$PYTHON"; then
+     AC_MSG_CHECKING(for Python prefix)
+-    PYPREFIX=`($PYTHON -c "import sys; print sys.prefix") 2>/dev/null`
++    PYPREFIX=$STAGING_DIR_HOST/usr
+     AC_MSG_RESULT($PYPREFIX)
+     AC_MSG_CHECKING(for Python exec-prefix)
+-    PYEPREFIX=`($PYTHON -c "import sys; print sys.exec_prefix") 2>/dev/null`
++    PYEPREFIX=$STAGING_DIR_HOST/usr
+     AC_MSG_RESULT($PYEPREFIX)
+ 
+ 
