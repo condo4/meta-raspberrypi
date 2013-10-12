@@ -1,0 +1,4 @@
+modprobe i2c-bcm2708
+modprobe i2c-dev
+CMDLINE=--i2c=/dev/i2c-1:ALL
+START_OWSERVER=yes
