@@ -9,7 +9,7 @@ RDEPENDS_${PN} = "initscripts\
 PR = "r1"
 
 SRC_URI = "git://github.com/condo4/owdatalogger.git;protocol=git"
-SRCREV = "18b916efa70262fb8ef7128a0eed14fb98031b57"
+SRCREV = "d63e4bfbc8834027a0e7a5080834afaafbed109e"
 
 inherit update-rc.d distutils-base cmake pkgconfig
 
