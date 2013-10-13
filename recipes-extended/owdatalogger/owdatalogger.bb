@@ -6,7 +6,7 @@ RDEPENDS_${PN} = "initscripts\
 	mysql5 \
 	libowcapi \
 "
-PR = "r1"
+PR = "r2"
 
 SRC_URI = "git://github.com/condo4/owdatalogger.git;protocol=git"
 SRCREV = "d63e4bfbc8834027a0e7a5080834afaafbed109e"
